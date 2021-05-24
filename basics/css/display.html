@@ -1,0 +1,266 @@
+<!-- 
+   DISPLAY property treats whether an element is block or inline element and the layout used for its children
+   Global
+    - inherit
+    - initial
+    - unset
+   Display can be categorized into 6 types 
+   - Outside
+        block - Element generates a block element box and generates line breaks before and after the element
+        inline - Element creates one or more inline element boxes without the linebreaks before and after the element and will be there in same line
+    - Inside
+        Flow - The element lays outside its contents
+        Flow-root - The element generates a block element box which establishes new Block Formatting Context (BFC) where formatting root lies
+        table - The elements behaves as a HTML table element. It defines a block level box
+        flex - These element defines a block element and lays its content according to flex model
+        grid - These element defines a block element and lays its content according to Grid model
+        ruby - - These element defines a inline element and lays its content according to ruby model
+    - ListItem
+        The element generates a block box for the content and a seperate list-item inline box
+    - Internal - Layouts such as table/ruby has complex internal structure with several different roles that the children and descendents can fill.
+        table-row-group - behaves like a <tbody> element
+        table-header-group - behaves as a <thead> element
+        table-footer-group - behaves as a <tfoot> element
+        table-row - behaves as a <tr> element
+        table-cell - behaves as a <td> element
+        table-column-group - behaves as a <colgroup> element
+        table-column - behaves as a <col> element
+        table-caption - behaves as a <caption> element
+    - Box
+        contents - They don't generate the specific box for themselves that are replaces by the psuedo box and child-box
+        none - turns off the display of the element. All descendent element's display would also be turned off.The document will be rendered as if element does not exist)
+    - Legacy
+        inline-block - Element generates a block element box that will be flowed with the surrounding content as if it were a single inline box
+        inline-table - It behaves like a <table> tag but as a inline box rather than block-level box. Inside the table box the content would be treated as the block level context
+        inline-flex - Element behaves like an inline element but lays out of its content according to flex model 
+        inline-grid - Element behaves like an inline element but lays out of its content according to Grid model
+        
+-->
+<!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+                .block{
+                    display:block;
+                }
+                .inline{
+                    display:inline;
+                }
+                .grid{
+                    display:grid;
+                }
+                .inline-grid{
+                    display:inline-grid;
+                }
+                .inline-flex{
+                    display:inline-flex;
+                }
+                .inline-block{
+                    display:inline-block;
+                }
+                .flex{
+                    display:flex;
+                }
+                .inline-table{
+                    display:inline-table;
+                }
+                .contents{
+                    display:contents;
+                }
+                .none{
+                    display:none;
+                }
+                .flow{
+                    display:flow;
+                }
+                .flow-root{
+                    display:flow-root;
+                }
+                .list-item{
+                    display:list-item;
+                }
+                .ruby{
+                    display:ruby;
+                }
+            </style>
+        </head>
+        <body>
+            <div class ="block">
+                <div>
+                    C1
+                </div>
+                <div>
+                    C2
+                </div>
+                <div>
+                    C3
+                </div>
+            </div>
+            <div class ="inline">
+                <div>
+                    C1
+                </div>
+                <div>
+                    C2
+                </div>
+                <div>
+                    C3
+                </div>
+            </div>
+            <div class ="flex">
+                <div>
+                    C1
+                </div>
+                <div>
+                    C2
+                </div>
+                <div>
+                    C3
+                </div>
+            </div>
+            <div class ="grid">
+                <div>
+                    C1
+                </div>
+                <div>
+                    C2
+                </div>
+                <div>
+                    C3
+                </div>
+            </div>
+            <div class ="flow">
+                <div>
+                    C1
+                </div>
+                <div>
+                    C2
+                </div>
+                <div>
+                    C3
+                </div>
+            </div>
+            <div class ="flow-root">
+                <div>
+                    C1
+                </div>
+                <div>
+                    C2
+                </div>
+                <div>
+                    C3
+                </div>
+            </div>
+            <div class ="table">
+                <div>
+                    C1
+                </div>
+                <div>
+                    C2
+                </div>
+                <div>
+                    C3
+                </div>
+            </div>
+            <div class ="ruby">
+                <div>
+                    C1
+                </div>
+                <div>
+                    C2
+                </div>
+                <div>
+                    C3
+                </div>
+            </div>
+            <div class ="list-item">
+                <div>
+                    C1
+                </div>
+                <div>
+                    C2
+                </div>
+                <div>
+                    C3
+                </div>
+            </div>
+            <div class ="inline-table">
+                <div>
+                    C1
+                </div>
+                <div>
+                    C2
+                </div>
+                <div>
+                    C3
+                </div>
+            </div>
+            <div class ="inline-flex">
+                <div>
+                    C1
+                </div>
+                <div>
+                    C2
+                </div>
+                <div>
+                    C3
+                </div>
+            </div>
+            <div class ="inline-grid">
+                <div>
+                    C1
+                </div>
+                <div>
+                    C2
+                </div>
+                <div>
+                    C3
+                </div>
+            </div>
+            <div class ="inline-table">
+                <div>
+                    C1
+                </div>
+                <div>
+                    C2
+                </div>
+                <div>
+                    C3
+                </div>
+            </div>
+            <div class ="inline-block">
+                <div>
+                    C1
+                </div>
+                <div>
+                    C2
+                </div>
+                <div>
+                    C3
+                </div>
+            </div>
+            <div class ="contents">
+                <div>
+                    C1
+                </div>
+                <div>
+                    C2
+                </div>
+                <div>
+                    C3
+                </div>
+            </div>
+            <div class ="none">
+                <div>
+                    C1
+                </div>
+                <div>
+                    C2
+                </div>
+                <div>
+                    C3
+                </div>
+            </div>
+        </body>
+    </html>
+</html>
