@@ -1,0 +1,65 @@
+<!-- 
+   POSITION property specifies the type of positioning methods used on a html element which might gets overlapped and z-index property can be used to stack order the elements;
+   There are 5 different position values
+    - static  - default and positioned as normal flow of the page. Top, left, bottom right doesn't affect position. Except static other are positioned elemnts
+    - relative - positioned relative to its normal flow of the page. Top, left, bottom right modifies the position the element. Other content do not adjust the gap left by this element
+    - fixed - postioned relative to the viewport, stays at same place even on scroll. Top,left,bottom, right is used to position it.
+    - absolute - positioned relative to the nearest positioned ancester or parent element.If it has no positioned ancestors then it uses document body and moves along with page scrolling.
+    - sticky - positioned based on the user's scroll position. It toggles between relative and fixed. It is relative until the offset position and once reaching the offset turns to sticky or fixed position.
+-->
+<!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+                .static{
+                    position: static;
+                    border: 3px solid #73AD21;
+                }
+                .fixed{
+                    position: fixed;
+                    right:0;
+                    border: 3px solid red;
+                }
+                .relative{
+                    position: relative;
+                    left: 30px;
+                    right:0;
+                    border: 3px solid yellow;
+                }
+                .absolute{
+                    position: absolute;
+                    right: 0;
+                    bottom:10px;
+                    border: 3px solid orange;
+                }
+                .sticky{
+                    top: 100px;
+                    position: sticky;
+                    border: 3px solid blue;
+                }
+            </style>
+        </head>
+        <body style = "height:1000px;">
+            <div class ="fixed">
+                <h2>Fixed</h2>
+            </div>
+            <div class ="static">
+                <h2>static</h2>
+            </div>
+            <div class ="relative">
+                <h2>relative</h2>
+            </div>
+            <div class ="absolute">
+                <h2>absolute without parent positioned element</h2>
+            </div>
+            <div class="relative">
+                <div class ="absolute">
+                    <h2>absolute with parent positioned element</h2>
+                </div>
+            </div>
+            <div class ="sticky">
+                <h2>Sticky</h2>
+            </div>
+        </body>
+    </html>
+</html>
