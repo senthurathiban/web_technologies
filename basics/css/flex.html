@@ -1,0 +1,92 @@
+<!-- 
+    FLEXBOX layout is a single direction layout concept aims on providing the efficient way to layout, align and distribute space amoung items within a container even when their size is unknown.
+        Flexbox is intended to small scale layouts.
+        Flex layout is based on the flex-direction
+    Flex layout consists of the following
+        Main Axis - main start & end ( not horizontal depends upon flex direction)
+        Cross Axis - cross start & end ( not vertical depends upon flex direction)
+            main size - height or width between main start and end
+            cross size - height or width between cross start and end
+    
+        FlexBox Properties
+            Container Element- 
+                display - Defines the flex container inline or block.( inline - inline-flex / block - flex). CSS columns has no effect on flex
+                flex-direction - defines the flex items horizontal rows or vertical columns
+                    row - left to right in ltr and right to left in rtl   (DEFAULT)
+                    row-reverse -  right to left in ltr and left to right in rtl
+                    column -  same as row but top to bottom
+                    column-reverse - same as row-reverse but bottom to top
+                flex-wrap - By default flex items try to fit it in one line you can allow the items to wrap with this property
+                    nowrap - (DEFAULT) all items will be in one line
+                    wrap -  flex items wrap onto multiple lines from top to bottom.
+                    wrap-reverse - flex items wrap onto multiple lines from bottom to top
+                flex-flow - This is the shorthand of flex direction and flex wrap (column wrap)
+                justify-content - Defines alignment along the main axis
+                    flex-start - Items are packed towards start of flex direction
+                    flex-end - Items are packed towards end of flex direction
+(NOT            --  start - Items are packed towards start of writing-mode direction
+SUPPORTED  _____|   end - Items are packed towards end of writing-mode direction 
+IN CHROME)      |   left - Items are packed towards left edge of the container unless that doesn't make sense with the flex-direction, then it behaves as start
+                --  right - Items are packed towards right edge of the container unless that doesn't make sense with the flex-direction, then it behaves as end
+                    center - Items are packed center along the line
+                    space-between - items are evenly distributed in the line; first item is on the start line, last item on the end line  (NOT SUPPORTED IN EDGE BROWSER)
+                    space-around - items are evenly distributed in the line with equal space around them.
+                    space-evenly - items are evenly distributed such a way that spaces between any two items will be equal
+                align-items - Defines alignment along the cross axis
+                    stretch - (DEFAULT) stretch to fill the container
+                    baseline - Items are aligned such as their baselines align
+                    flex-start/start/self-start - Items are aligned along the start of the cross axis based on the flex-direction / writing-mode
+                    flex-end/end/self-end - Items are aligned along the end of the cross axis based on the flex-direction / writing-mode
+                align-content - Aligns a flex container line along the cross axis similiar to justify-content does in main axis.
+                    normal - (DEFAULT) aligns based on the position of arrangement
+                    flex-start / start - Items packed to the start of the container along cross axis
+                    flex-end / end  -Items packed to the end of the container along cross axis
+                    center - Items packed to the center  of the container along cross axis
+                    space-around - Evenly distributed and equal spaces around each line
+                    space-between - Items packed in a way that the first line is at the start of the container and the last is at the end of the container
+                    stretch - lines stretch to take up the remaining space
+            Item element - 
+                order -
+                flex-grow - 
+                flex-shrink - 
+                flex-basis -
+                flex - 
+                align-self -
+-->
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+                .flexbox{
+                    display: flex;
+                }
+                .item{
+
+                }
+            </style>
+        </head>
+        <body>
+            <div class ="flexbox">
+                <div class ="item"></div>    
+                <div class ="item"></div>    
+                <div class ="item"></div>    
+                <div class ="item"></div>    
+                <div class ="item"></div>    
+                <div class ="item"></div>    
+                <div class ="item"></div>    
+                <div class ="item"></div>    
+                <div class ="item"></div>    
+                <div class ="item"></div>    
+                <div class ="item"></div>    
+                <div class ="item"></div>    
+                <div class ="item"></div> 
+                <div class ="item"></div>    
+                <div class ="item"></div>    
+                <div class ="item"></div>    
+                <div class ="item"></div>    
+                <div class ="item"></div>    
+            </div>
+        </body>
+    </html>
+</html>
