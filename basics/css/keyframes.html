@@ -1,0 +1,103 @@
+<!-- 
+   KEYFRAMES are rules specified to animate. The animation is created by gradually changing from one set to another css styles.
+   Styles are changed with percent or with keywords from and to which is same as 0% and 100%. 0% refers to the start of the animation while 100% refers to the completion of the animation
+   
+   SYNTAX: @keyframes animationname {keyframes-selector {css-styles;}}
+
+   CSS Animation Properties
+    animation - animation shorthand
+            example              5s                      linear                    2s                    infinite                alternate
+        animation-name   animation-duration    animation-timing-function    animation-delay     animation-iteration-count   animation-direction
+    animation-name - animation name of keyframe
+    animation-duration - how long an animation should take to complete (default 0) and if not specified no animation will occur
+    animation-delay - delay for start of the animation
+    animation-iteration-count - no of times animation to be executed or (infinite)
+    animation-direction - direction of animation (normal -forward, reverse -backward, alternate -forward First and then Backward, alternate-reverse -backward first and then forward)
+    animation-timing-function - 
+        linear -  Specifies an animation with the same speed from start to end
+        ease (default) -  Specifies an animation with a slow start, then fast, then end slowly
+        ease-in - Specifies an animation with a slow start
+        ease-out - Specifies an animation with a slow end
+        ease-in-out - Specifies an animation with a slow start and end
+        cubic-beizer(n,n,n,n) - define your own values in this function
+    animation-fill-mode - specifies a style for the target element when the animation is not playing (before it starts, after it ends, or both).
+        none - animation do not apply any style before start or after animation ends. (DEFAULT)
+        forwards - Depending upon animation-iteration-count and the animation-direction the last keyframe style set will be retained.
+        backwards - Depending upon animation-iteration-count the first keyframe style set will be retained during the animation-delay period.
+        both -  Follows the rules of both forwards and backwards extending the animation properties in both direction.
+-->
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+                @keyframes animate {
+                    from {
+                        background-color: red;
+                    }
+                    50%  {top: 100px !important;} /* important is ignored in keyframes */
+                    to {
+                        background-color: orange;
+                    }
+                }
+                @keyframes animate2 {
+                    0% {
+                        background-color: red;
+                    }
+                    100% {
+                        background-color: orange;
+                    }
+                }
+                .example,.example1{
+                    border-radius: 24px;
+                    padding:16px;
+                    height: 300px;
+                    display:inline-block;
+                    width:300px;
+                    background-color: grey;
+                }
+                .example{
+                    animation-name: animate;
+                    animation-duration: 5s;
+                    animation-delay: 1s;
+                    animation-iteration-count: 1;
+                    animation-direction:normal;
+                    animation-timing-function: linear;
+                    animation-fill-mode: forwards;
+                }
+                .example1{
+                    animation: animate2;
+                    animation-duration: 10s;
+                    animation-delay: 6s;
+                    animation-iteration-count: 2;
+                    animation-direction:reverse;
+                    animation-timing-function: ease-in-out;
+                    animation-fill-mode: backwards;
+                }
+            </style>
+        </head>
+        <body>
+            <div class ="example">
+                <pre>
+animation-name: animate;
+animation-duration: 5s;
+animation-delay: 1s;
+animation-iteration-count: 1;
+animation-direction:normal;
+animation-timing-function: linear;
+animation-fill-mode: forwards;
+                </pre>
+            </div>
+            <div class ="example1">
+                <pre>animation: animate2;
+animation-duration: 10s;
+animation-delay: 6s;
+animation-iteration-count: 2;
+animation-direction:reverse;
+animation-timing-function: ease-in-out;
+animation-fill-mode: backwards;
+                </pre>
+            </div>
+        </body>
+    </html>
+</html>
