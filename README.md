@@ -1,1 +1,1 @@
-# web_technologies
+# WEB Technologies
