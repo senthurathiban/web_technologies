@@ -69,3 +69,5 @@ function tick() {
     ReactDOM.render(element, document.getElementById('root'));
 }
 setInterval(tick, 1000);
+// Render is called for every second from a setInterval
+// ReactDOM compares the element and its children to its previous one and updatesthe DOM only if necessary.
